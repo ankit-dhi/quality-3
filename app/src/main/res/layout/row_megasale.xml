@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="megasaleRowModel" type="com.ankitsapplication.app.modules.dashboard.data.model.MegasaleRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProduct"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+        <ImageView android:id="@+id/imageProductimageThree"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_109pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_109pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_productimage_2}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_productimage_2"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtMSNikeAirM"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:text="@{megasaleRowModel.txtMSNikeAirM}"
+            style="@style/txtPoppinsbold12_1" tools:text="@string/msg_ms_nike_air_m"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtPriceThree"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{megasaleRowModel.txtPriceThree}"
+            style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_299_43"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDiscount"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOldPriceThree"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.5" android:layout_width="0dp"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{megasaleRowModel.txtOldPriceThree}"
+                style="@style/txtPoppinsregular10" tools:text="@string/lbl_534_33"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOfferFour"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_weight="0.5" android:layout_width="0dp"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{megasaleRowModel.txtOfferFour}"
+                style="@style/txtPoppinsbold10" tools:text="@string/lbl_24_off"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
